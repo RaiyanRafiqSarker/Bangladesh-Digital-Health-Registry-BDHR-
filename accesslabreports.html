@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Access Lab Reports</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+</head>
+
+<body>
+
+    <h1 class="dotted" align="center">Access Lab Reports</h1>
+
+    <form align="center">
+        <fieldset>
+            <legend style="color: red;">Lab Reports</legend>
+
+            <table class="tablelayout">
+
+                <tr>
+                    <td><label for="testType">Filter by Test:</label></td>
+                    <td>
+                        <select id="testType">
+                            <option value="">All Tests</option>
+                            <option>Blood Test</option>
+                            <option>Urine Test</option>
+                            <option>X-Ray</option>
+                            <option>MRI</option>
+                            <option>CT Scan</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="dateFilter">Filter by Date:</label></td>
+                    <td><input type="date" id="dateFilter"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button type="button" onclick="filterReports()">Apply Filter</button></td>
+                </tr>
+
+                <tr>
+                    <td><label><b>Report Name</b></label></td>
+                    <td><label><b>Action</b></label></td>
+                </tr>
+
+                <tr>
+                    <td>Blood Test Report</td>
+                    <td><button type="button">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>X-Ray Chest</td>
+                    <td><button type="button">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>Urine Routine</td>
+                    <td><button type="button">View</button></td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+    </form>
+
+    <script>
+        function filterReports() {
+           
+            const type = document.getElementById("testType").value;
+            const date = document.getElementById("dateFilter").value;
+
+            if (type === "" && date === "") {
+                alert("Showing all reports.");
+            } 
+            else if (type !== "" && date === "") {
+                alert("Filter applied: " + type);
+            }
+            else if (type === "" && date !== "") {
+                alert("Filter applied for date: " + date);
+            }
+            else {
+                alert("Filter applied: " + type + " on " + date);
+            }
+        }
+    </script>
+
+</body>
+
+<footer>
+        <h1 style="background-color: black; color: white;" align="Center"><b>Thanks for your support</b></h1>
+</footer>
+
+</html>
