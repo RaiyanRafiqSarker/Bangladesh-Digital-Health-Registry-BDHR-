@@ -1,56 +1,51 @@
+
 <html>
  <head>
         <title>Patient Regitration</title>
-        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="../design.css">
  </head>
 
   <body>
         <h1 class="dotted" style="color: black;" align="Center">Patient Registration</h1>
 
-     <form align="center" onsubmit="validateform(event)">
+     <form align="center" method="POST" action="../Controllers/Registration_Check.php">
         <fieldset>
             <legend style="color: red;">Patient Registration Form</legend>
         <table class="tablelayout">
-            
+   
             <tr>
             <td><label for="name">Name:</label><br></td>
-            <td><input id="username" type="text" name="" value=""><br></td>
+            <td><input id="username" type="text" name="username" value=""><br></td>
             </tr>
 
             <tr>
             <td><label for="id">Mobile No:</label><br></td>
-            <td><input id="mobileno" type="text" value=""><br></td>
+            <td><input id="mobileno" type="text" name="mobileno" value=""><br></td>
             </tr>
-
-            <tr>
-                <td></td>
-            </tr>
-
+<br>
             <tr>
             <td><label for="password">Enter your Password:</label><br></td>
-            <td><input id="password" type="password" value=""><br></td>
+            <td><input id="password" type="password" name= "password"><br></td>
             </tr>
 
             <tr>
-             <td><label for="mail">Mail Address:</label><br></td>
-             <td><input id="email" type="email" mail="" value=""/><br>
+             <td><label for="email">Mail Address:</label><br></td>
+             <td><input id="email" type="email" name="email" value=""/><br>
             </tr>
             
             <tr>
                 <td></td>
             <td>
-                <input type="submit" name="" value="Register"/>
-                <input type="reset" name="" value="Reload"/>
+                
             </td>
-            </tr>
-
-            
-            
+            </tr>     
         </table> 
+               <button type="submit">Register</button>
+                <input type="reset" name="" value="Reload"/>
         </fieldset>
-  
+               
       </form>
-
+       
       <script>
         function validateform(event){
             event.preventDefault();//reload when I click reload on browser
