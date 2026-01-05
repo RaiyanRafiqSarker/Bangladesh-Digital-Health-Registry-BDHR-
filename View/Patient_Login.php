@@ -1,26 +1,32 @@
 <html>
  <head>
         <title>Patient Login</title>
-        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="../design.css">
  </head>
 
   <body>
         <h1 class="dotted" style="color: black;" align="Center">Login</h1>
 
-     <form align="center" action="Patient_Login_Check.php" method="POST">
+     <form align="center" action="../Controllers/Patient_Login_Check.php" method="POST">
         <fieldset>
             <legend style="color: red;">Welcome to the Login Page</legend>
         <table class="tablelayout">
 
-             <tr>
+             <!-- <tr>
             <td><label>Select Catagory:</label></td>
              <td><select name="catagory">
                 <option value="select">Select Catagory From Here</option>
                 <option value="Doctor">Doctor</option>
                 <option value="Patient">Patient</option>
              </td></select><br>
-            </tr>
+            </tr> -->
             
+            <!-- <tr>
+            <td><label for="name">Name:</label><br></td>
+            <td><input id="username" type="text" name="username" value=""><br></td>
+            </tr> -->
+
+
             <tr>
             <td><label for="id">Mobile No:</label><br></td>
             <td><input id="mobileno" type="text" value="" name="mobileno"><br></td>
@@ -36,22 +42,24 @@
              <td><input id="email" type="email" mail="" value="" name="email"/><br>
             </tr>
 
-            <tr>
+            <!-- <tr>
             <td><label for="name">Enter your OTP:</label><br></td>
             <td><input id="otp" type="password" value="" name="otp"><br></td>
-            </tr>
+            </tr> -->
             
             <tr>
                 <td></td>
             <td>
-                <input type="submit" name="submit" value="Login">
+                <button type="submit">Login </button>
                 <input type="reset" name="" value="Reload"/>
             </td>
             </tr>
 
             
         </table> 
-         <p align="Center">Didn't have an account?<a href="Patient_Registration.html">Register Now</a>.</p>
+         <p align="Center">Didn't have an account?<a href="Patient_Registration.php">Register Now</a>.</p>
+
+          
         </fieldset>
   
       </form>
@@ -95,6 +103,8 @@
 
       </script>
     -->
+
+    
   </body>
 
   

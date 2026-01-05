@@ -1,7 +1,7 @@
 <html>
  <head>
         <title>Patient Dashboard</title>
-        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="../design.css">
  </head>
 
   <body>
@@ -29,7 +29,7 @@
 
             <tr>
             <td><label></label><br></td>
-            <td><a href="Patient_Login.html">Logout</a></td>
+            <td><a href="Patient_Login.php">Logout</a></td>
             </tr>
             
 
