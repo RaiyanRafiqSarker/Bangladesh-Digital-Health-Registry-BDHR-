@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Manage Admissions (Admin)</title>
-    <link rel="stylesheet" href="admission.css">
+    <link rel="stylesheet" href="../admission.css">
    
 </head>
 

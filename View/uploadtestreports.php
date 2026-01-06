@@ -3,7 +3,7 @@
 <head>
     
     <title>Upload Lab Test Reports</title>
-    <link rel="stylesheet" href="testreports.css">
+    <link rel="stylesheet" href="../testreports.css">
     
 </head>
 

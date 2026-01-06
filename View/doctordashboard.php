@@ -16,6 +16,31 @@
         <table class="tablelayout">
 
             <tr>
+           
+            <td><label>Doctor Actions:</label></td>
+            <td>
+
+            <select id="doctorAction">
+            <option value="">-- Select Action --</option>
+            <option value="updatediagnosisprescription.php">
+                Update Diagnosis & Prescription
+            </option>
+            <option value="accesslabreports.php">
+                Access Lab Reports
+            </option>
+            <option value="emergencyaccess.php">
+                Emergency Access
+            </option>
+            </select>
+
+            <br><br>
+
+        <button type="button" onclick="goToAction()">Go</button>
+        </td>
+        </tr>
+
+
+            <tr>
                 <td><label>Enter Patient ID:</label></td>
                 <td>
                
@@ -60,6 +85,16 @@
         </table>
     </fieldset>
 </form>
+<script>
+function goToAction() {
+    const page = document.getElementById("doctorAction").value;
+    if (page === "") {
+        alert("Please select an action");
+        return;
+    }
+    window.location.href = page;
+}
+</script>
 
 </body>
 

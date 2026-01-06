@@ -3,7 +3,7 @@
 <head>
     
     <title>Emergency Access Request</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     
 </head>
 
