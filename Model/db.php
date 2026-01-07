@@ -51,4 +51,35 @@ function login_check( $mobileno, $password, $email){
     $conn->close();
 }
 
+
+/* =========================
+   Nishad db.php
+   Database Functions
+   ========================= */
+
+function getAppointments() {
+    $conn = getConnection();
+    $sql = "SELECT * FROM appointments";
+    return mysqli_query($conn, $sql);
+}
+
+function getReports() {
+    $conn = getConnection();
+    $sql = "SELECT * FROM reports";
+    return mysqli_query($conn, $sql);
+}
+
+
+function searchPatient($patientId) {
+    $conn = getConnection();
+    $sql = "SELECT * FROM patients WHERE patient_id='$patientId'";
+    return mysqli_query($conn, $sql);
+}
+function getPatientReports($patientId) {
+    $conn = getConnection();
+    $sql = "SELECT * FROM reports WHERE patient_id = '$patientId'";
+    return mysqli_query($conn, $sql);
+}
+
+
 ?>
