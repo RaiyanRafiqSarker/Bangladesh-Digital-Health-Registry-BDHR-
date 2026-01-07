@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <title>Update Diagnosis & Prescription</title>
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+
+<body>
+
+    <h1 class="dotted" align="center">Update Diagnosis & Prescription</h1>
+
+    <form align="center" onsubmit="saveRecord(event)">
+        <fieldset>
+            <legend style="color: red;">Diagnosis & Prescription</legend>
+
+            <table class="tablelayout">
+
+                <tr>
+                    <td><label for="patientId">Patient ID:</label></td>
+                    <td><input id="patientId" type="text" placeholder=""></td>
+                </tr>
+
+                <tr>
+                    <td><label for="diagnosis">Diagnosis:</label></td>
+                    <td><textarea id="diagnosis" placeholder=""></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label for="prescription">Prescription:</label></td>
+                    <td><textarea id="prescription" placeholder=""></textarea></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Save">
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+    </form>
+
+    <script>
+        function saveRecord(event) {
+            event.preventDefault();
+
+            const patientId = document.getElementById("patientId").value.trim();
+            const diagnosis = document.getElementById("diagnosis").value.trim();
+            const prescription = document.getElementById("prescription").value.trim();
+
+            if (patientId.length === 0) {
+                alert("Patient ID is required.");
+                return;
+            }
+            if (diagnosis.length === 0) {
+                alert("Diagnosis cannot be empty.");
+                return;
+            }
+            if (prescription.length === 0) {
+                alert("Prescription cannot be empty.");
+                return;
+            }
+
+            alert("Diagnosis & Prescription Saved Successfully.");
+        }
+    </script>
+
+</body>
+
+<footer>
+        <h1 style="background-color: black; color: white;" align="Center"><b>Thanks for your support</b></h1>
+</footer>
+
+</html>
