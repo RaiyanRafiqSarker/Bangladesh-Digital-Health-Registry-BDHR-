@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Admissions (Admin)</title>
+    <link rel="stylesheet" href="../admission.css">
+   
+</head>
+
+<body>
+
+    <h1 class="dotted" align="center">Manage Admissions</h1>
+
+    <form align="center">
+        <fieldset>
+            <legend style="color: red;">Admissions Panel</legend>
+
+            <table class="tablelayout">
+
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><b>Patient ID</b></td>
+                    <td><b>Admission Date</b></td>
+                    <td><b>Discharge Date</b></td>
+                    <td><b>Status</b></td>
+                    <td><b>Action</b></td>
+                </tr>
+
+                <tr>
+                    <td>Abdul Karim</td>
+                    <td>ID-20251</td>
+                    <td>2025-02-08</td>
+                    <td id="dis1"></td>
+                    <td id="st1" class="active">Admitted</td>
+                    <td>
+                        <button type="button" onclick="updateAdmission('st1')">Update</button>
+                        <br><br>
+                        <button type="button" onclick="discharge('dis1','st1')">Discharge</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nasima Akter</td>
+                    <td>ID-20252</td>
+                    <td>2025-02-05</td>
+                    <td id="dis2"></td>
+                    <td id="st2" class="active">Admitted</td>
+                    <td>
+                        <button type="button" onclick="updateAdmission('st2')">Update</button>
+                        <br><br>
+                        <button type="button" onclick="discharge('dis2','st2')">Discharge</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Kamrul Hasan</td>
+                    <td>ID-20253</td>
+                    <td>2025-02-03</td>
+                    <td id="dis3"></td>
+                    <td id="st3" class="active">Admitted</td>
+                    <td>
+                        <button type="button" onclick="updateAdmission('st3')">Update</button>
+                        <br><br>
+                        <button type="button" onclick="discharge('dis3','st3')">Discharge</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+    </form>
+
+    <script>
+        
+        function updateAdmission(statusId) {
+            alert("Admission record updated.");
+        }
+
+        function discharge(dischargeId, statusId) {
+            let today = new Date();
+            let y = today.getFullYear();
+            let m = (today.getMonth() + 1).toString().padStart(2, '0');
+            let d = today.getDate().toString().padStart(2, '0');
+
+            let finalDate = y + "-" + m + "-" + d;
+
+            document.getElementById(dischargeId).textContent = finalDate;
+
+            const st = document.getElementById(statusId);
+            st.textContent = "Discharged";
+            st.className = "discharged";
+
+            alert("Patient discharged successfully.");
+        }
+    </script>
+
+</body>
+
+<footer>
+        <h1 style="background-color: black; color: white;" align="Center"><b>Thanks for your support</b></h1>
+</footer>
+
+</html>
