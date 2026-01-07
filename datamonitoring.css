@@ -1,0 +1,55 @@
+body{
+    background-color: ivory);
+}
+
+.dotted{
+    border: dotted;
+    background-color: skyblue;
+}
+
+h1{
+    color: black;
+}
+
+label{
+    color: black;
+}
+
+table{
+    margin-top: 5px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.tablelayout{
+    border: 1px solid black;
+    margin: 5px;
+    background-color:skyblue;
+    border-radius: 20PX;
+    width: 500px;
+    height:350px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 570px;
+    margin-right: 570px;
+}
+
+select {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+        }
+button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+        }
+.log-box {
+    margin-top: 10px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+        }
